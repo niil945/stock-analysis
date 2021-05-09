@@ -63,8 +63,6 @@ Instead of looping through the data repeatedly for each ticker, we utilized an i
         If Cells(j, 1).Value <> Cells(j + 1, 1).Value Then
         
                 tickerEndingPrices(tickerIndex) = Cells(j, 6).Value
-                'Verify cumulative totals accurate for testing
-                'MsgBox ("Total = " & tickerVolumes(tickerIndex))
                 tickerIndex = tickerIndex + 1
                 
         End If
