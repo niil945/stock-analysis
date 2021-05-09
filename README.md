@@ -35,6 +35,12 @@ In the initial code we hardcoded the ticker values, looped through each of the 3
                 endingPrice = Cells(j, 6).Value
             End If
         Next j
+        'Output results
+        Worksheets("All Stocks Analysis").Activate
+        Cells(4 + i, 1).Value = ticker
+        Cells(4 + i, 2).Value = totalVolume
+        Cells(4 + i, 3).Value = endingPrice / startingPrice - 1
+    Next i
 ```
 
 Tabulating the data this way resulted in the output requiring ~12-13 seconds to run.
