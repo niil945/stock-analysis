@@ -1,10 +1,10 @@
 # stock-analysis
 
-##Overview
+## Overview
 
 This weeks challenge focused on refactoring code to improve execution time. In our original iteration we looped through the data once for each of the 12 tickers in the dataset. The objective of the refactoring was to see the result of minimizing looping through the dataset to a single loop, tabulating values based on indexes, and ensuring the final values received matched the original data.
 
-##Results
+## Results
 
 In the initial code we hardcoded the ticker values, looped through each of the 3011 rows of data once for each of those 12 values via nested for loops, resulting in parsing 36,132 rows of data as seen here:
 
@@ -78,7 +78,7 @@ Tabulating the data within a single loop resulted in the output generating in ~.
 
 [Post-refactor 2018 Timer](Resources/VBA_Challenge_2018.png)
 
-##Summary
+## Summary
 
 There are a variety of advantages and disadvantages to consider when refactoring code. In this instance we were able to clean up the code and vastly improve the rate at which it was able to output the necessary data by a factor of more than 10. However refactoring code requires care as making changes without understanding how everything works can result in errors and non-functional code. For this reason it is important to always comment providing insight for anyone that may refactor the code in the future and to ensure that no 'magic numbers' are being utilized that aren't comprehensible to another developer who could work on the code in the future. It requires verification and re-verification to ensure that the data output or function of the code is the same as the previous iteration, that it works with all other dependent code, and is easy to analyze and refactor again in the future.
 
