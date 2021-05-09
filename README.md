@@ -30,7 +30,7 @@ In the initial code we hardcoded the ticker values, looped through each of the 3
 
 Tabulating the data this way resulted in the output requiring ~12-13 seconds to run.
 
-[Pre-Refactor 2017 Timer](Resources/Pre-Refactor_TImer_2017.png)
+[Pre-Refactor 2017 Timer](Resources/Pre-Refactor_Timer_2017.png)
 
 [Pre-Refactor 2018 Timer](Resources/Pre-Refactor_Timer_2018.png)
 
