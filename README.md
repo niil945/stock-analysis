@@ -1,9 +1,11 @@
 # stock-analysis
 
 ##Overview
+
 This weeks challenge focused on refactoring code to improve execution time. In our original iteration we looped through the data once for each of the 12 tickers in the dataset. The objective of the refactoring was to see the result of minimizing looping through the dataset to a single loop, tabulating values based on indexes, and ensuring the final values received matched the original data.
 
 ##Results
+
 In the initial code we hardcoded the ticker values, looped through each of the 3011 rows of data once for each of those 12 values via nested for loops, resulting in parsing 36,132 rows of data as seen here:
 
 ```
