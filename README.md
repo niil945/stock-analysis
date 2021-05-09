@@ -70,7 +70,7 @@ Instead of looping through the data repeatedly for each ticker, we utilized an i
     Next j
 ```
 
-Tabulating the data within a single loop resulted in the output generating in ~1 second. 
+Tabulating the data within a single loop resulted in the output generating in ~.1 second. 
 
 [Post-refactor 2017 Timer](Resources/VBA_Challenge_2017.png)
 
