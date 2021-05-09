@@ -30,9 +30,9 @@ In the initial code we hardcoded the ticker values, looped through each of the 3
 
 Tabulating the data this way resulted in the output requiring ~12-13 seconds to run.
 
-[Pre-refactor 2017 Timer](Resources/Pre-Refactor_2017.png)
+[Pre-Refactor_2017.png](Resources/)
 
-[Pre-refactor 2018 Timer](Resources/Pre-Refactor_2018.png)
+[Pre-Refactor_2018.png](Resources/)
 
 Instead of looping through the data repeatedly for each ticker, we utilized an index and stored the values within the indexed arrays for each of the tickers we wanted to capture data for. Resulting code was marginally more complex but comparable length. The most important factor is that instead of parsing 36,132 rows of data the output is calculated parsing each line only once for a total of 3011 rows of data being parsed.
 
