@@ -6,7 +6,7 @@ This weeks challenge focused on refactoring code to improve execution time. In o
 ##Results
 In the initial code we hardcoded the ticker values, looped through each of the 3011 rows of data once for each of those 12 values via nested for loops, resulting in parsing 36,132 rows of data as seen here:
 
->    For i = 0 To 11
+>  For i = 0 To 11
 >        ticker = tickers(i)
 >        totalVolume = 0
 >        For j = 2 To RowCount
@@ -26,16 +26,17 @@ In the initial code we hardcoded the ticker values, looped through each of the 3
 >        
 >                endingPrice = Cells(j, 6).Value
 >            End If
->        Next j
+>  Next j
 
 Tabulating the data this way resulted in the output requiring ~12-13 seconds to run.
 
-[Pre-refactor 2017 Timer](resources/Pre-Refactor_2017.png)
-[Pre-refactor 2018 Timer](resources/Pre-Refactor_2018.png)
+[Pre-refactor 2017 Timer](Resources/Pre-Refactor_2017.png)
+
+[Pre-refactor 2018 Timer](Resources/Pre-Refactor_2018.png)
 
 Instead of looping through the data repeatedly for each ticker, we utilized an index and stored the values within the indexed arrays for each of the tickers we wanted to capture data for. Resulting code was marginally more complex but comparable length. The most important factor is that instead of parsing 36,132 rows of data the output is calculated parsing each line only once for a total of 3011 rows of data being parsed.
 
->    For j = 2 To RowCount
+>  For j = 2 To RowCount
 >    
 >        tickerVolumes(tickerIndex) = tickerVolumes(tickerIndex) + Cells(j, 8).Value
 >        ticker(tickerIndex) = Cells(j, 1).Value
@@ -53,12 +54,13 @@ Instead of looping through the data repeatedly for each ticker, we utilized an i
 >                
 >        End If
 >       
->    Next j
+>  Next j
 
 Tabulating the data within a single loop resulted in the output generating in ~1 second. 
 
-[Post-refactor 2017 Timer](resources/VBA_Challenge_2017.png)
-[Post-refactor 2018 Timer](resources/VBA_Challenge_2018.png)
+[Post-refactor 2017 Timer](Resources/VBA_Challenge_2017.png)
+
+[Post-refactor 2018 Timer](Resources/VBA_Challenge_2018.png)
 
 ##Summary
 
